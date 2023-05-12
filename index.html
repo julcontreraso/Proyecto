@@ -12,67 +12,67 @@
 </head>
 
 <body>
-
-  <div class="container-fluid">
-    <nav id="menu1" class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-      <!-- enlaces -->
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="login.html">Iniciar sesión</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="registro.html">Registrarse</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="">Ayuda</a>
-        </li>
+  <div class="container">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Inicio</a></li>
+        <li class="nav-item"><a href="ayuda.html" class="nav-link">Ayuda</a></li>
+        <li class="nav-item"><a href="acercade.html" class="nav-link">Acerca de nosotros</a></li>
+        <form>
+          <input type="search" class="form-control" placeholder="Buscar...">
+        </form>
       </ul>
-    </nav>
-    <br><br><br><br>
-    <div>
-      <h1>Raices Verdes</h1>
-    </div>
-
-    <img src="img/capitalismo.png" alt="..." width="25%" class="rounded mx-auto d-block">
-
-
-    <div class="row">
-      <div class="column">
-        <div class="card">
-
-          <div class="container">
-            <h2>Plantas</h2>
-            <p class="title">Catalogo de plantas de todo tipo. </p>
-
-            <p><button class="button" onclick="location.href='ctlogoplantas.html'">Ver catálogo</button></p>
-          </div>
-        </div>
+      <div class="col-md-3 text-end">
+        <a href="login.html" class="btn btn-outline-primary me-2">Iniciar Sesion</a>
+        <a href="registro.html" class="btn btn-primary">Registrarse</a>
       </div>
+    </header>
+  </div>
 
-      <div class="column">
-        <div class="card">
 
-          <div class="container">
-            <h2>Tierra de hoja</h2>
-            <p class="title">Sustrato natural desarrollado a partir de la compostación de hojas y residuos vegetales,
-              que mejora las condiciones de los suelos, tanto para el desarrollo de prados como el de otras plantas.
-              Favorece la germinación y crecimiento del césped.</p>
 
-            <p><button class="button" onclick="location.href='ctlogotierra.html'">Ver catálogo</button></p>
-          </div>
-        </div>
+
+  <br><br><br>
+  <div class="col-lg-6 col-md-8 mx-auto">
+    <img src="img/capitalismo.png" alt="..." width="50%" class="rounded mx-auto d-block">
+    <h1 class="fw-light">Raices Verdes</h1><br><br>
+    <p class="lead text-body-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis ab deleniti,
+      id cupiditate deserunt quisquam eum veritatis architecto dolorum, eos molestias accusamus error a cumque nisi quia
+      aspernatur voluptates adipisci?</p>
+    <p>
+      <a href="plantas.html" class="btn btn-primary my-2">Plantas</a>
+      <a href="accesorios.html" class="btn btn-secondary my-2">Accesorios</a>
+    </p>
+  </div>
+
+  <div class="container">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+      <div class="col mb-3">
+        <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+          <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+        <p class="text-body-secondary">© 2023</p>
+        <p class="small opacity">Autores de la página: Alexsander Vargas, Julio Contreras, Vicente Gutierrez</p>
       </div>
-
-<footer>
-  <p>Autores
-<ul> <li>Julio Contreras</li>
-  <li>Vicente Gutierrez</li>
-  <li>Alexsander Vargas</li>
-</ul>
-  </p>
-</footer>
-
-
+      <div class="col mb-3">
+      </div>
+      <div class="col mb-3">
+      </div>
+      <div class="col mb-3">
+      </div>
+      <div class="col mb-3">
+        <h5>Contacto</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Instagram</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Facebook</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Twitter</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Correo</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
 
 </body>
 

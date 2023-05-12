@@ -12,39 +12,73 @@
 
 </head>
 <body>
-    <div class="container-fluid">
-        <nav id="menu1" class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-          <!-- enlaces -->
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="registro.html">Registrarse</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Ayuda</a>
-            </li>
-          </ul>
-        </nav>
-        <br><br><br><br><br>
-    <div class="container">
-        <h1>Iniciar Sesión</h1>
-        <form>
-          <div class="form group"
-          <label for="rut">Ingrese su Rut</label>
-          <input type="text" class="form-control" id="rut" >
-      
-          </div>
-          <div class="form-group">
-          <label from="Contraseña">Ingresar Contraseña</label>
-          <input type="password" class="form-control" id="Contraseña">
-          </div>
-          <br>
-          <button type="submit" class="btn btn-primary">Enviar</buton>
-         </form>
-      </div>
+  
+  <div class="container">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Inicio</a></li>
+        <li class="nav-item"><a href="accesorios.html" class="nav-link">Accesorios</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Ayuda</a></li>
     
+        <form>
+          <input type="search" class="form-control" placeholder="Buscar...">
+        </form>
+      </ul>
+      <div class="col-md-3 text-end">
+        <a href="login.html" class="btn btn-outline-primary me-2">Iniciar Sesion</a>
+        <a href="registro.html" class="btn btn-primary">Registrarse</a>
+      </div>
+    </header>
+  </div>
+  <br><br><br><br>
+
+  <div class="container">
+    <div class="row">
+      <form>
+        <h1>Iniciar Sesion</h1>
+        <div class="form-group">
+          <label for="correo">Ingrese su correo: </label>
+          <input class="form-control" type="text" id="correo" placeholder="alguien@example.com"><br>
+        </div>
+        <div class="form-group">
+          <label for="password">Ingrese su contraseña: </label>
+          <input class="form-control" type="password" id="password" placeholder="password321">
+
+        </div><br>
+        <div class="form-group col-sm">
+          <input class="btn btn-primary" type="button" name="btnConectar" value="Conectar" data-bs-toggle="modal" data-bs-target="#modalInicio">
+          <button class="btn btn-secondary" type="reset">Limpiar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalInicio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-4" id="tituloModal">Bienvenido</h1>
+        </div>
+
+        <div class="modal-body mx-auto d-block">
+          <img src="img/capitalismo.png" class="img-thumbnail mx-auto">
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Conectar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+
+        </div>
+      </div>
+    </div>
     
 </body>
+
+<script>
+
+
+</script>
 </html>

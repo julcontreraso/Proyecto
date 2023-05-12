@@ -1,60 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=
     , initial-scale=1.0">
-    <title>Registro de usuario</title>
-    <link rel="stylesheet" href="mystyle.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/bootstrap.bundle.js"></script>
+  <title>Registro de usuario</title>
+  <link rel="stylesheet" href="mystyle.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 
 </head>
+
 <body>
-    <div class="container-fluid">
-        <nav id="menu1" class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-          <!-- enlaces -->
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Iniciar sesión</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Ayuda</a>
-            </li>
-          </ul>
-        </nav>
-        <br><br><br><br><br>
-    <div class="container">
-        <h1>Registro de usuario</h1>
+  <div class="container">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Inicio</a></li>
+        <li class="nav-item"><a href="accesorios.html" class="nav-link">Accesorios</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Ayuda</a></li>
+
         <form>
-          <div class="form group"
-          <label for="Nombre Completo">Ingrese su Nombre Completo</label>
-          <input type="text" class="form-control" id="Nombre Completo" >
-      
-          </div>
-          <div class="form-group">
-          <label from="Rut">Ingrese su Rut</label>
-          <input type="text" class="form-control" id="Rut">
-          </div>
-
-          <div class="form-group">
-          <label from="Contraseña">Ingrese su Contraseña</label>
-          <input type="text" class="form-control" id="Contraseña">
-          </div>
-
-          <div class="form-group">
-          <label from="Correo">Ingrese su Correo</label>
-          <input type="text" class="form-control" id="Correo">
-          </div>
-
-          <button type="submit" class="btn btn-primary">Registrarse</buton>
-         </form>
+          <input type="search" class="form-control" placeholder="Buscar...">
+        </form>
+      </ul>
+      <div class="col-md-3 text-end">
+        <a href="login.html" class="btn btn-outline-primary me-2">Iniciar Sesion</a>
+        <a href="registro.html" class="btn btn-primary">Registrarse</a>
       </div>
-    
-    
+    </header>
+  </div>
+  <br><br>
+
+
+  <div class="container">
+    <div class="row">
+      <form>
+        <h1>Registrarse</h1>
+        <div class="form-group col-sm-4">
+          <label for="username">Nombre de usuario: </label>
+          <input class="form-control" type="text" name="username" id="username" placeholder="Ingrese su usuario: "><br>
+        </div>
+        <div class="form-group col-sm-4">
+          <label for="password">Contraseña</label>
+          <input class="form-control" type="password" name="password" id="password"
+            placeholder="Ingrese Contraseña:"><br>
+        </div>
+
+        <div class="form-group col-sm-4">
+          <label for="correo">Correo: </label>
+          <input class="form-control" type="text" name="correo" id="correo" placeholder="Ingrese su correo: "><br>
+
+        </div>
+
+      
+        <div class="form-group col-sm-4">
+          
+          <label>Genero:</label><br>
+          <input type="radio" name="optRadio" id="optRadio" value="Masculino">
+          <label for="optRadio">Masculino</label><br>
+
+          <input type="radio" name="optRadio" id="optRadio" value="Femenino">
+          <label for="optRadio">Femenino</label><br>
+
+          <input type="radio" name="optRadio" id="optRadio" value="Otro">
+          <label for="optRadio">Otro</label><br><br>
+
+          
+          <label for="cboRegiones">Region:</label>
+          <select name="cboRegiones" id="cboRegiones" class="form-select mb-3 col-md-4">
+            <option value="" disable hidden>Seleccione una opcion</option>
+          </select>
+
+          <label for="cboProvincias">Provincia:</label>
+          <select name="cboProvincias" id="cboProvincias" class="form-select mb-3 col-md-4" disabled>
+            <option value="" disable hidden>Seleccione una opcion</option>
+          </select>
+
+          <label for="cboComunas">Comuna:</label>
+          <select name="cboComunas" id="cboComunas" class="form-select mb-3 col-md-4" disabled>
+            <option value="" disable hidden>Seleccione una opcion</option>
+          </select>
+
+
+        </div>
+        <br>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" id="btnRegistrar">Registrarse</button>
+          <input class="btn btn-primary" type="reset" name="btnReset" value="Limpiar">
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
 </body>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+  
+  $(document).ready(function(){
+    $("#btnRegistrar").click(function(){
+      
+
+      var user = $("username").val();
+      var pass = document.getElementById("password").value;
+      var mail = $("correo").val();
+      var resul = true
+
+ 
+      //Condiciones Nombre de usuario
+      if (user.length == 0){
+        resul = false
+        $("#username").css("border", "2px solid red")
+
+      }else {
+        $("#username").css("border","1px solid black")
+      }
+
+
+      //Condiciones Contraseña
+      if (pass.length < 10){
+        resul = false
+        $("password").css("border", "2px solid red")
+      } else {
+        $("#password").css("border", "1px solid black")
+      }
+
+
+      // Condiciones correo
+      if (mail.includes("@", 0 )){
+        $("#correo").css("border", "1px solid black")
+      } else {
+        resul = false
+        $("correo").css("border", "2px solid red")
+      }
+    })
+  })
+
+</script>
+
 </html>

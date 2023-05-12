@@ -62,3 +62,35 @@ html {
   .button:hover {
     background-color: #555;
   }
+
+
+
+  .footer {
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: bisque;
+    color: blue;
+    text-align: center;
+
+  }
+
+  .center{
+
+      text-align: center!important;
+  }
+
+  small{
+
+    font-size: 12px!important;
+
+  }
+
+  .opacity{
+
+    opacity: 0.60;
+
+  }
+
